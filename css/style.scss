@@ -1,6 +1,29 @@
+/* 
+0. Fonts Used
+1. General Css
+2. NavBar
+3. Hero Section
+4. About Me Section
+
+
+
+
+
+*/
+
+/***************************
+*********The Fonts Used*****
+***************************/
+
+
 // font-family: 'Noto Sans HK', sans-serif;
 // font-family: 'Oswald', sans-serif;
 // font-family: 'Roboto Slab', serif;
+
+
+/////////////////////////////////////
+//////1. The General Css///////////////
+///////////////////////////////////
 body {
     margin: 0;
     padding: 0;
@@ -11,7 +34,22 @@ a {
     text-decoration: none;
     color: inherit;    
 }
+h1 {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 0;
+}
+p {
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 1.5em;
 
+}
+table {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
+}
+/////////////////////////////////////
+//////2. NavBar/////////////////////
+///////////////////////////////////
 header.navbar {
     position: absolute;
     width: 100%;
@@ -23,7 +61,7 @@ header.navbar {
         font-family: 'Oswald', sans-serif;
         ul {
             right: 50px;
-            padding-left: 60rem;
+            padding-left: 30%;
             list-style-type: none;
             display: inline-block;
             .active{
@@ -39,54 +77,96 @@ header.navbar {
         }
     }
 }
-
+/////////////////////////////////////
+//////3. Hero Section///////////////
+///////////////////////////////////
 section.hero{
     background-color: #F6F4E6;
-    display: grid;
-    grid-template-areas: "main aside";
     height: 100vh;
-    main {
-        width: 60%;
-        grid-area: main;
-        padding-top: 100px;
-        align-items: center;
-        margin: 100px 0 0 100px;
-        *{
-            max-width: 60%;
-        }
-        h1 {
-            font-size: 9em;
-            font-family: 'Oswald', sans-serif;
-            margin-bottom: 0;
-        }
-        h3 {
-            font-size: 2.5em;
-            font-family: 'Roboto Slab', serif;
-        }
-        p {
-            font-family: 'Noto Sans HK', sans-serif;
-            font-size: 1.5em;
+    .hero-content {
+        display: grid;
+        grid-template-areas: "main aside";
+        max-width: 80%;
+        margin: 0 auto;
+
+        main {
+            width: 100%;
+            grid-area: main;
+            padding-top: 100px;
+            align-items: center;
+            margin: 100px 0 0 100px;
+            *{
+                max-width: 60%;
+            }
+            h1 {
+                font-size: 9em;
+            }
+            h3 {
+                font-size: 2.5em;
+                font-family: 'Roboto Slab', serif;
+            }
+
+            button {
+                border: none;
+                background-color: #FDDB3A;
+                color: #41444B;
+                padding: 20px 40px;
+                border-radius: 50px;
+                font-size: 1.7em;
+
+
+            }
 
         }
-        button {
-            border: none;
-            background-color: #FDDB3A;
-            color: #41444B;
-            padding: 20px 40px;
-            border-radius: 50px;
-            font-size: 1.7em;
-
-
+        aside {
+            grid-area: aside;
+            padding-top: 100px;
+            img {
+                margin-top: 100px;
+                height: 60%;
+            }
         }
-
     }
-    aside {
-        grid-area: aside;
-        padding-top: 100px;
-        img {
-            margin-top: 100px;
-            height: 60%;
+}
+/////////////////////////////////////
+//////4. About Me Section///////////
+///////////////////////////////////
+section.about-me {
+    height: 100vh;
+    background-color: #fddb3a38;
+    .about-me-content {
+        display: grid;
+        grid-template-areas: "aside main";
+        margin: 0 auto;
+        main {
+            width: 85%;
+            padding-top: 30%;
+            grid-area: main;
+            .text-about-me {
+                h1 {
+                    font-size: 7em;
+                }
+            }
+            .contact {
+                h3 {
+                    font-family: 'Roboto Slab', serif;
+                }
+                ul {
+                    list-style-type: none;
+                    display: inline-block;
+                    li {
+                        display: inline-block;
+                        img {
+                            height: 50px;
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        aside {
+            grid-area: aside;
+            margin-top: 20%;
         }
     }
-
 }

@@ -1,3 +1,18 @@
+/* 
+0. Fonts Used
+1. General Css
+2. NavBar
+3. Hero Section
+4. About Me Section
+
+
+
+
+
+*/
+/***************************
+*********The Fonts Used*****
+***************************/
 body {
   margin: 0;
   padding: 0;
@@ -7,6 +22,21 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 0;
+}
+
+p {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 1.5em;
+}
+
+table {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5em;
 }
 
 header.navbar {
@@ -24,7 +54,7 @@ header.navbar nav {
 
 header.navbar nav ul {
   right: 50px;
-  padding-left: 60rem;
+  padding-left: 30%;
   list-style-type: none;
   display: inline-block;
 }
@@ -43,16 +73,21 @@ header.navbar nav ul li {
 
 section.hero {
   background-color: #F6F4E6;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "main aside";
   height: 100vh;
 }
 
-section.hero main {
-  width: 60%;
+section.hero .hero-content {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "main aside";
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+section.hero .hero-content main {
+  width: 100%;
   -ms-grid-row: 1;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   grid-area: main;
   padding-top: 100px;
   -webkit-box-align: center;
@@ -61,27 +96,20 @@ section.hero main {
   margin: 100px 0 0 100px;
 }
 
-section.hero main * {
+section.hero .hero-content main * {
   max-width: 60%;
 }
 
-section.hero main h1 {
+section.hero .hero-content main h1 {
   font-size: 9em;
-  font-family: 'Oswald', sans-serif;
-  margin-bottom: 0;
 }
 
-section.hero main h3 {
+section.hero .hero-content main h3 {
   font-size: 2.5em;
   font-family: 'Roboto Slab', serif;
 }
 
-section.hero main p {
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 1.5em;
-}
-
-section.hero main button {
+section.hero .hero-content main button {
   border: none;
   background-color: #FDDB3A;
   color: #41444B;
@@ -90,15 +118,64 @@ section.hero main button {
   font-size: 1.7em;
 }
 
-section.hero aside {
+section.hero .hero-content aside {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: aside;
   padding-top: 100px;
 }
 
-section.hero aside img {
+section.hero .hero-content aside img {
   margin-top: 100px;
   height: 60%;
+}
+
+section.about-me {
+  height: 100vh;
+  background-color: #fddb3a38;
+}
+
+section.about-me .about-me-content {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "aside main";
+  margin: 0 auto;
+}
+
+section.about-me .about-me-content main {
+  width: 85%;
+  padding-top: 30%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: main;
+}
+
+section.about-me .about-me-content main .text-about-me h1 {
+  font-size: 7em;
+}
+
+section.about-me .about-me-content main .contact h3 {
+  font-family: 'Roboto Slab', serif;
+}
+
+section.about-me .about-me-content main .contact ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+section.about-me .about-me-content main .contact ul li {
+  display: inline-block;
+}
+
+section.about-me .about-me-content main .contact ul li img {
+  height: 50px;
+  width: 50px;
+}
+
+section.about-me .about-me-content aside {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: aside;
+  margin-top: 20%;
 }
 /*# sourceMappingURL=style.css.map */
