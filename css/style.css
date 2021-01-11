@@ -4,6 +4,7 @@
 2. NavBar
 3. Hero Section
 4. About Me Section
+5. Why Choose Me
 
 
 
@@ -27,6 +28,10 @@ a {
 h1 {
   font-family: 'Oswald', sans-serif;
   margin-bottom: 0;
+}
+
+h3 {
+  font-family: 'Roboto Slab', serif;
 }
 
 p {
@@ -167,6 +172,10 @@ section.about-me .about-me-content main .contact ul li {
   display: inline-block;
 }
 
+section.about-me .about-me-content main .contact ul li figcaption {
+  font-family: 'Noto Sans HK', sans-serif;
+}
+
 section.about-me .about-me-content main .contact ul li img {
   height: 50px;
   width: 50px;
@@ -177,5 +186,45 @@ section.about-me .about-me-content aside {
   -ms-grid-column: 1;
   grid-area: aside;
   margin-top: 20%;
+}
+
+section.why-choose-me {
+  background-color: #F6F4E6;
+  height: 100vh;
+}
+
+section.why-choose-me h1 {
+  font-size: 7em;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 60px;
+  margin-bottom: 100px;
+}
+
+section.why-choose-me .why-choose-me-content {
+  width: 80%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "... ... ..." "... ... ...";
+  gap: 70px 70px;
+}
+
+section.why-choose-me .why-choose-me-content .item {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+section.why-choose-me .why-choose-me-content .item img {
+  width: 30%;
+}
+
+section.why-choose-me .why-choose-me-content .item h3 {
+  font-size: 2em;
+}
+
+section.why-choose-me .why-choose-me-content .item p {
+  font-size: 1em;
 }
 /*# sourceMappingURL=style.css.map */
