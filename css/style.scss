@@ -89,7 +89,7 @@ section.hero{
     height: 100vh;
     .hero-content {
         display: flex;
-        max-width: 90%;
+        width: 90%;
         margin: 0 auto;
 
         main {
@@ -138,6 +138,7 @@ section.about-me {
     background-color: #fddb3a38;
     .about-me-content {
         display: flex;
+        width: 90%;
         margin: 0 auto;
         flex-direction: row-reverse;
         main {

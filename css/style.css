@@ -85,7 +85,7 @@ section.hero .hero-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 90%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -139,6 +139,7 @@ section.about-me .about-me-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 90%;
   margin: 0 auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
