@@ -51,6 +51,9 @@ table {
     font-family: 'Roboto Slab', serif;
     font-size: 1.5em;
 }
+button:focus {
+    outline: none;
+}
 /////////////////////////////////////
 //////2. NavBar/////////////////////
 ///////////////////////////////////
@@ -198,11 +201,14 @@ section.why-choose-me {
         margin: 0 auto;
         display: grid;
         grid-template-areas: "... ... ..." "... ... ...";
-        gap: 70px 70px;
         .item {
-            height: 100%;
-            width: 100%;
+            height: 80%;
+            width: 80%;
+            padding: 10%;
             text-align: center;
+            &:hover {
+                background-color: #fddb3a38;
+            }
 
             img {
                 width: 30%;
@@ -214,6 +220,63 @@ section.why-choose-me {
             p {
                 font-size: 1em;
             }
+        }
+    }
+
+}
+
+/////////////////////////////////////
+//////5. Recent Works///////////////
+///////////////////////////////////
+
+section.recent-work {
+    height: 100vh;
+    background-color: #fddb3a38;
+    h1 {
+        font-size: 7em;
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 60px;
+        margin-bottom: 100px;
+    }
+    .recent-work-content {
+        width: 80%;
+        margin:auto;
+        display: grid;
+        grid-template-areas: "item-1 item-3" "item-2 item-3";
+        .item-1 {
+            grid-area: item-1;
+            img {
+                width: 57%;
+                transform: translate(257px, 0px);
+            }
+        }
+        .item-2 {
+            grid-area: item-2;
+            img {
+                width: 70%;
+                transform: translate(317px, 192px);
+                z-index: 67;
+                position: relative;
+            }
+        }
+        .item-3 {
+            grid-area: item-3;
+            img {
+                width: 100%;
+                transform: translate(-169px, 56px);
+            }
+        }
+        button {
+            position: absolute;
+            border: none;
+            background-color: #FDDB3A;
+            color: #41444B;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.7em;
+            bottom: 3%;
+            right: 27%;
         }
     }
 
