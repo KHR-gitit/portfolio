@@ -82,18 +82,15 @@ section.hero {
 }
 
 section.hero .hero-content {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "main aside";
-  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 90%;
   margin: 0 auto;
 }
 
 section.hero .hero-content main {
-  width: 100%;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: main;
+  width: 70%;
   padding-top: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -124,15 +121,13 @@ section.hero .hero-content main button {
 }
 
 section.hero .hero-content aside {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: aside;
   padding-top: 100px;
+  width: 30%;
 }
 
 section.hero .hero-content aside img {
-  margin-top: 100px;
-  height: 60%;
+  margin-top: 30%;
+  height: 70%;
 }
 
 section.about-me {
@@ -141,18 +136,19 @@ section.about-me {
 }
 
 section.about-me .about-me-content {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "aside main";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 section.about-me .about-me-content main {
-  width: 85%;
-  padding-top: 30%;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: main;
+  width: 50%;
+  padding-top: 10%;
 }
 
 section.about-me .about-me-content main .text-about-me h1 {
@@ -182,10 +178,12 @@ section.about-me .about-me-content main .contact ul li img {
 }
 
 section.about-me .about-me-content aside {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: aside;
-  margin-top: 20%;
+  margin-top: 15%;
+  width: 50%;
+}
+
+section.about-me .about-me-content aside img {
+  width: 100%;
 }
 
 section.why-choose-me {
