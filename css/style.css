@@ -44,8 +44,60 @@ table {
   font-size: 1.5em;
 }
 
+button {
+  -webkit-transition: -webkit-box-shadow 0.7s;
+  transition: -webkit-box-shadow 0.7s;
+  transition: box-shadow 0.7s;
+  transition: box-shadow 0.7s, -webkit-box-shadow 0.7s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
 button:focus {
   outline: none;
+}
+
+button:hover {
+  -webkit-box-shadow: 0 2.2px 2.5px -21px rgba(0, 0, 0, 0.021), 0 4.8px 5.5px -21px rgba(0, 0, 0, 0.031), 0 8.1px 9.3px -21px rgba(0, 0, 0, 0.038), 0 12.2px 14px -21px rgba(0, 0, 0, 0.044), 0 17.5px 20.2px -21px rgba(0, 0, 0, 0.05), 0 24.8px 28.5px -21px rgba(0, 0, 0, 0.056), 0 35.2px 40.5px -21px rgba(0, 0, 0, 0.062), 0 51.1px 58.8px -21px rgba(0, 0, 0, 0.069), 0 78.8px 90.6px -21px rgba(0, 0, 0, 0.079), 0 140px 161px -21px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2.2px 2.5px -21px rgba(0, 0, 0, 0.021), 0 4.8px 5.5px -21px rgba(0, 0, 0, 0.031), 0 8.1px 9.3px -21px rgba(0, 0, 0, 0.038), 0 12.2px 14px -21px rgba(0, 0, 0, 0.044), 0 17.5px 20.2px -21px rgba(0, 0, 0, 0.05), 0 24.8px 28.5px -21px rgba(0, 0, 0, 0.056), 0 35.2px 40.5px -21px rgba(0, 0, 0, 0.062), 0 51.1px 58.8px -21px rgba(0, 0, 0, 0.069), 0 78.8px 90.6px -21px rgba(0, 0, 0, 0.079), 0 140px 161px -21px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 7em;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 60px;
+  margin-bottom: 100px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+label {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 1em;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  color: black;
+  border: none;
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 1em;
+  background-color: #FDDB3A;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+#not-robot {
+  height: 25px;
+  width: 25px;
 }
 
 header.navbar {
@@ -54,8 +106,6 @@ header.navbar {
 }
 
 header.navbar nav {
-  width: 80%;
-  margin: 0 auto;
   color: #41444B;
   font-size: 1.8em;
   font-family: 'Oswald', sans-serif;
@@ -82,7 +132,7 @@ header.navbar nav ul li {
 
 section.hero {
   background-color: #F6F4E6;
-  height: 100vh;
+  height: 100%;
 }
 
 section.hero .hero-content {
@@ -135,16 +185,15 @@ section.hero .hero-content aside img {
 }
 
 section.about-me {
-  height: 100vh;
+  height: 100%;
   background-color: #fddb3a38;
+  padding-bottom: 10%;
 }
 
 section.about-me .about-me-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
-  margin: 0 auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -193,20 +242,11 @@ section.about-me .about-me-content aside img {
 
 section.why-choose-me {
   background-color: #F6F4E6;
-  height: 100vh;
-}
-
-section.why-choose-me h1 {
-  font-size: 7em;
-  text-align: center;
-  margin-top: 0px;
-  padding-top: 60px;
-  margin-bottom: 100px;
+  height: 100%;
+  padding-bottom: 10%;
 }
 
 section.why-choose-me .why-choose-me-content {
-  width: 80%;
-  margin: 0 auto;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "... ... ..." "... ... ...";
@@ -236,21 +276,13 @@ section.why-choose-me .why-choose-me-content .item p {
 }
 
 section.recent-work {
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 20%;
   background-color: #fddb3a38;
 }
 
-section.recent-work h1 {
-  font-size: 7em;
-  text-align: center;
-  margin-top: 0px;
-  padding-top: 60px;
-  margin-bottom: 100px;
-}
-
 section.recent-work .recent-work-content {
-  width: 80%;
-  margin: auto;
+  position: relative;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "item-1 item-3" "item-2 item-3";
@@ -303,7 +335,48 @@ section.recent-work .recent-work-content button {
   padding: 20px 40px;
   border-radius: 50px;
   font-size: 1.7em;
-  bottom: 3%;
-  right: 27%;
+  bottom: -10%;
+  right: 21%;
+}
+
+section.contact-me {
+  height: 100%;
+  background-color: #F6F4E6;
+}
+
+section.contact-me .contact-me-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.contact-me .contact-me-content main {
+  width: 50%;
+}
+
+section.contact-me .contact-me-content main form div * {
+  display: block;
+}
+
+section.contact-me .contact-me-content main form .fname {
+  display: inline-block;
+  width: 44%;
+}
+
+section.contact-me .contact-me-content main form .email input {
+  color: black;
+}
+
+section.contact-me .contact-me-content main form .not-robot * {
+  display: inline-block;
+}
+
+section.contact-me .contact-me-content main form .not-robot, section.contact-me .contact-me-content main form .submit {
+  display: inline-block;
+}
+
+section.contact-me .contact-me-content main form .submit {
+  width: 30%;
+  padding-left: 5%;
 }
 /*# sourceMappingURL=style.css.map */

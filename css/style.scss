@@ -51,8 +51,59 @@ table {
     font-family: 'Roboto Slab', serif;
     font-size: 1.5em;
 }
+button {
+    transition: box-shadow 0.7s;
+    transition-timing-function: ease-in-out;
+}
 button:focus {
     outline: none;
+
+}
+button:hover {
+    box-shadow:
+    0 2.2px 2.5px -21px rgba(0, 0, 0, 0.021),
+    0 4.8px 5.5px -21px rgba(0, 0, 0, 0.031),
+    0 8.1px 9.3px -21px rgba(0, 0, 0, 0.038),
+    0 12.2px 14px -21px rgba(0, 0, 0, 0.044),
+    0 17.5px 20.2px -21px rgba(0, 0, 0, 0.05),
+    0 24.8px 28.5px -21px rgba(0, 0, 0, 0.056),
+    0 35.2px 40.5px -21px rgba(0, 0, 0, 0.062),
+    0 51.1px 58.8px -21px rgba(0, 0, 0, 0.069),
+    0 78.8px 90.6px -21px rgba(0, 0, 0, 0.079),
+    0 140px 161px -21px rgba(0, 0, 0, 0.1)
+  ;
+}
+.title {
+    font-size: 7em;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 60px;
+    margin-bottom: 100px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+label {
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 1em;
+}
+input, textarea {
+    width: 80%;
+    padding:10px;
+    border-radius: 20px;
+    color: black;
+    border: none;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 1em;
+    background-color: #FDDB3A;
+    &:focus {
+        outline: none;
+    }
+}
+#not-robot {
+    height: 25px;
+    width: 25px;
 }
 /////////////////////////////////////
 //////2. NavBar/////////////////////
@@ -61,8 +112,6 @@ header.navbar {
     position: absolute;
     width: 100%;
     nav {
-        width: 80%;
-        margin: 0 auto;
         color:#41444B;
         font-size: 1.8em;
         font-family: 'Oswald', sans-serif;
@@ -89,7 +138,7 @@ header.navbar {
 ///////////////////////////////////
 section.hero{
     background-color: #F6F4E6;
-    height: 100vh;
+    height: 100%;
     .hero-content {
         display: flex;
         width: 90%;
@@ -137,12 +186,11 @@ section.hero{
 //////4. About Me Section///////////
 ///////////////////////////////////
 section.about-me {
-    height: 100vh;
+    height: 100%;
     background-color: #fddb3a38;
+    padding-bottom: 10%;
     .about-me-content {
         display: flex;
-        width: 90%;
-        margin: 0 auto;
         flex-direction: row-reverse;
         main {
             width: 50%;
@@ -188,17 +236,9 @@ section.about-me {
 
 section.why-choose-me {
     background-color: #F6F4E6;
-    height: 100vh;
-    h1 {
-        font-size: 7em;
-        text-align: center;
-        margin-top: 0px;
-        padding-top: 60px;
-        margin-bottom: 100px;
-    }
+    height: 100%;
+    padding-bottom: 10%;
     .why-choose-me-content {
-        width: 80%;
-        margin: 0 auto;
         display: grid;
         grid-template-areas: "... ... ..." "... ... ...";
         .item {
@@ -230,18 +270,11 @@ section.why-choose-me {
 ///////////////////////////////////
 
 section.recent-work {
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 20%;
     background-color: #fddb3a38;
-    h1 {
-        font-size: 7em;
-        text-align: center;
-        margin-top: 0px;
-        padding-top: 60px;
-        margin-bottom: 100px;
-    }
     .recent-work-content {
-        width: 80%;
-        margin:auto;
+        position: relative;
         display: grid;
         grid-template-areas: "item-1 item-3" "item-2 item-3";
         .item-1 {
@@ -275,9 +308,55 @@ section.recent-work {
             padding: 20px 40px;
             border-radius: 50px;
             font-size: 1.7em;
-            bottom: 3%;
-            right: 27%;
+            bottom: -10%;
+            right: 21%;
         }
     }
 
+}
+
+/////////////////////////////////////
+//////6. Contact Me/////////////////
+///////////////////////////////////
+
+section.contact-me {
+    height: 100%;
+    background-color: #F6F4E6;
+    .contact-me-content {
+        display: flex;
+        main {
+            width: 50%;
+            form {
+                div {
+                    * {
+                        display: block;
+                    }
+                }
+                .fname {
+                    display: inline-block;
+                    width: 44%;
+                }
+                .email {
+                    input {
+                        color: black;
+                    }
+                }
+                .not-robot {
+                    * {
+                        display: inline-block;
+                    }
+                }
+                .not-robot, .submit {
+                    display: inline-block;
+                }
+                .submit {
+                    width: 30%;
+                    padding-left: 5%;
+                }
+            }
+        }
+        // .aside {
+
+        // }
+    }
 }
