@@ -5,7 +5,8 @@
 3. Hero Section
 4. About Me Section
 5. Why Choose Me
-
+6. Contact Me
+7. Footer
 
 
 
@@ -342,6 +343,7 @@ section.recent-work .recent-work-content button {
 section.contact-me {
   height: 100%;
   background-color: #F6F4E6;
+  padding-bottom: 100px;
 }
 
 section.contact-me .contact-me-content {

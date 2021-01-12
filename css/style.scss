@@ -5,7 +5,8 @@
 3. Hero Section
 4. About Me Section
 5. Why Choose Me
-
+6. Contact Me
+7. Footer
 
 
 
@@ -23,7 +24,7 @@
 
 
 /////////////////////////////////////
-//////1. The General Css///////////////
+//////1. The General Css////////////
 ///////////////////////////////////
 body {
     margin: 0;
@@ -322,6 +323,7 @@ section.recent-work {
 section.contact-me {
     height: 100%;
     background-color: #F6F4E6;
+    padding-bottom: 100px;
     .contact-me-content {
         display: flex;
         main {
@@ -355,12 +357,11 @@ section.contact-me {
                 }
             }
         }
-        // .aside {
-
-        // }
     }
 }
-
+/////////////////////////////////////
+//////7. Footer/////////////////
+///////////////////////////////////
 footer {
     text-align: center;
     padding: 30px;
